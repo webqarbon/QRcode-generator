@@ -224,7 +224,6 @@ textarea {
     justify-content: center;
     align-items: center;
     padding-bottom: 25px;
-    .
   }
   .code_block,
   .options_block,
@@ -238,6 +237,9 @@ textarea {
   }
   .btn{
     margin-bottom: 25px;
+  }
+  .footer{
+    position: relative;
   }
 }
 @media (max-width: 600px) {
