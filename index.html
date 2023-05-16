@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/qrcode@latest/qrcode.min.js"></script>
+    <title>QR code Generator</title>
+    
+  </head>
+  <body>
+    <header>
+      <nav>
+        <div class="logo_block">
+          <a href="#" class="logo">qr code</a>
+          <a href="#" class="logo_sub">generator</a>
+        </div>
+        <div class="descr_block">
+          <p class="descr">безкоштовний сервіс</p>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="window">
+        <div class="code_block">
+          <div class="img"></div>
+          <div class="size_title">Оберіть розмір</div>
+          <div class="size_options">
+            <select name="size_choose" class="sz_choose">
+              <option value="1">300x300</option>
+              <option value="2">400x400</option>
+              <option value="3">500x500</option>
+              <option value="4">750x750</option>
+            </select>
+            <div class="download_button">
+              <button class="btn">Завантажити</button>
+            </div>
+          </div>
+        </div>
+        <div class="options_block">
+          <div class="input_block">
+            <div class="input_title">Введіть текст чи посилання</div>
+            <div class="input_area">
+              <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+            </div>
+          </div>
+          <div class="color">
+            <div class="color_title">Оберіть колір</div>
+            <div class="color_choose">
+              <button class="blue_circle"></button>
+              <button class="sky_circle"></button>
+              <button class="purple_circle"></button>
+              <button class="green_circle"></button>
+            </div>
+          </div>
+          <div class="gen_button">
+            <button class="gen_btn" onclick="generateQRCode()">Згенерувати</button>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="footer">
+        <p class="author">by Kutsenko Dmytro</p>
+      </div>
+    </footer>
+    <script>
+      function generateQRCode() {
+        var text = document.getElementById("textarea").value;
+        var qrCodeDiv = document.getElementById("qrcode");
+        qrCodeDiv.innerHTML = "";
+        var qrcode = new QRCode(qrCodeDiv, {
+          width: 300,
+          height: 300
+        });
+        qrcode.makeCode(text);
+      }
+    </script>
+  </body>
+</html>
