@@ -112,8 +112,20 @@ textarea {
   text-align: left;
   padding: 3px;
   border: 1px solid black;
-  height: 60px;
+  height: 96px;
   width: 250px;
+}
+.reset{
+  background: #002c60;
+  border: none;
+  border-radius: 40px;
+  width: 250px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 29px;
+  letter-spacing: 0.1em;
+  color: #ffffff;
+  cursor: pointer;
 }
 .input_title {
   margin-bottom: 5px;

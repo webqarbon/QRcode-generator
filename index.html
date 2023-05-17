@@ -7,7 +7,6 @@
     <link rel="shortcut icon" href="icon.png" type="image/x-icon" />
     <link rel="stylesheet" href="reset.css" />
     <link rel="stylesheet" href="style.css" />
-    <script src="https://cdn.jsdelivr.net/npm/qrcode@latest/qrcode.min.js"></script>
     <title>QR code Generator</title>
     
   </head>
@@ -26,17 +25,18 @@
     <main>
       <div class="window">
         <div class="code_block">
-          <div class="img"></div>
+          <div class="img">
+            <img src="https://chart.googleapis.com/chart?cht=qr&chl=текст по умолчанию&chs=220x220&choe=UTF-8&chld=L|2" alt="qr code" id="code">
+          </div>
           <div class="size_title">Оберіть розмір</div>
           <div class="size_options">
-            <select name="size_choose" class="sz_choose">
-              <option value="1">300x300</option>
-              <option value="2">400x400</option>
-              <option value="3">500x500</option>
-              <option value="4">750x750</option>
+            <select name="size_choose" class="sz_choose" id="size">
+              <option value="300">300x300</option>
+              <option value="400">400x400</option>
+              <option value="500">500x500</option>
             </select>
             <div class="download_button">
-              <button class="btn">Завантажити</button>
+              <button class="btn" id="btnl">Завантажити</button>
             </div>
           </div>
         </div>
@@ -44,20 +44,23 @@
           <div class="input_block">
             <div class="input_title">Введіть текст чи посилання</div>
             <div class="input_area">
-              <textarea name="" id="textarea" cols="30" rows="10"></textarea>
+              <textarea  id="text" cols="30" rows="10"></textarea>
+            </div>
+            <div class="reset_btn">
+              <button class="reset" id="reset">Очистити</button>
             </div>
           </div>
           <div class="color">
             <div class="color_title">Оберіть колір</div>
             <div class="color_choose">
-              <button class="blue_circle"></button>
-              <button class="sky_circle"></button>
-              <button class="purple_circle"></button>
-              <button class="green_circle"></button>
+              <button class="blue_circle" id="blue"></button>
+              <button class="sky_circle" id="sky"></button>
+              <button class="purple_circle" id="purple"></button>
+              <button class="green_circle" id="green" ></button>
             </div>
           </div>
           <div class="gen_button">
-            <button class="gen_btn" onclick="generateQRCode()">Згенерувати</button>
+            <button class="gen_btn" id="buttongen">Згенерувати</button>
           </div>
         </div>
       </div>
@@ -67,17 +70,6 @@
         <p class="author">by Kutsenko Dmytro</p>
       </div>
     </footer>
-    <script>
-      function generateQRCode() {
-        var text = document.getElementById("textarea").value;
-        var qrCodeDiv = document.getElementById("qrcode");
-        qrCodeDiv.innerHTML = "";
-        var qrcode = new QRCode(qrCodeDiv, {
-          width: 300,
-          height: 300
-        });
-        qrcode.makeCode(text);
-      }
-    </script>
+    <script src="script.js"></script>
   </body>
 </html>
