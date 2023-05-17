@@ -176,7 +176,7 @@ textarea {
   margin-right: 3px;
 }
 .blue_circle:focus {
-  outline: 3px white solid;
+  border: 3px white solid;
   box-shadow: 3px 3px 8px rgb(0, 0, 0);
 }
 .sky_circle:focus {
