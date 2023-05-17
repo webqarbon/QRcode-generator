@@ -37,8 +37,6 @@ nav {
   color: white;
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
-.descr_block {
-}
 .descr {
   font-weight: 700;
   text-transform: uppercase;
@@ -91,8 +89,6 @@ main {
 .sz_choose {
   margin-bottom: 15px;
 }
-.download_button {
-}
 .btn {
   background: #002c60;
   border: none;
@@ -130,14 +126,8 @@ textarea {
 .input_title {
   margin-bottom: 5px;
 }
-.input_area {
-}
-.color {
-}
 .color_title {
   margin-top: 35px;
-}
-.color_choose {
 }
 .blue_circle {
   border:none;
@@ -191,9 +181,6 @@ textarea {
   outline: 3px white solid;
   box-shadow: 3px 3px 8px rgb(0, 0, 0);
 }
-.gen_button {
-
-}
 .gen_btn {
   margin-top: 15px;
   background: #002c60;
@@ -209,7 +196,6 @@ textarea {
 }
 .btn:hover, .gen_btn:hover, .reset:hover {
   background-color: #3e8e41;
-
 }
 .footer {
   background-color: #002c60;
