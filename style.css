@@ -108,8 +108,8 @@ textarea {
   text-align: left;
   padding: 3px;
   border: 1px solid black;
-  height: 96px;
-  width: 250px;
+  max-height: 96px;
+  max-width: 250px;
 }
 .reset{
   background: #002c60;
