@@ -110,6 +110,8 @@ textarea {
   padding: 3px;
   border: 1px solid black;
   max-height: 96px;
+  min-height: 96px;
+  min-width: 250px;
   max-width: 250px;
 }
 .reset{
